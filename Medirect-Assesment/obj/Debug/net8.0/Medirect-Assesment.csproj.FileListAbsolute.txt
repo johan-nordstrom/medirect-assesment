@@ -1,0 +1,5 @@
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.csproj.AssemblyReference.cache
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.AssemblyInfoInputs.cache
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.AssemblyInfo.cs
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.csproj.CoreCompileInputs.cache
