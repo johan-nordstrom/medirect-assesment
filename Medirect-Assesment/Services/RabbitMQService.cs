@@ -35,10 +35,13 @@ namespace Medirect_Assesment.Services
             var message = JsonSerializer.Serialize(trade);
             var body = System.Text.Encoding.UTF8.GetBytes(message);
 
-            await _channel.BasicPublishAsync(exchange: "", routingKey: "trades", mandatory: true, cancellationToken: null, body: body);
-
-            //return Task.CompletedTask;
-            await Task.CompletedTask;
+            await _channel.BasicPublishAsync(
+                exchange: "",
+                routingKey: "trades",
+                mandatory: true,
+                basicProperties: null,
+                body: new ReadOnlyMemory<byte>(body)
+            );
         }
     }
 }
