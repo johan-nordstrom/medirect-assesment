@@ -1,6 +1,4 @@
-// TradingMicroservice/Services/IMessageQueueService.cs
-using System.Threading.Tasks;
-using TradingMicroservice.Models;
+using Medirect_Assesment.Models;
 
 namespace Medirect_Assesment.Services
 {

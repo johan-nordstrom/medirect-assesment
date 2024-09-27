@@ -3,3 +3,4 @@ C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net
 C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.AssemblyInfoInputs.cache
 C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.AssemblyInfo.cs
 C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.csproj.CoreCompileInputs.cache
+C:\Users\johan\RiderProjects\Medirect-Assesment\Medirect-Assesment\obj\Debug\net8.0\Medirect-Assesment.sourcelink.json

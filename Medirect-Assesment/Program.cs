@@ -21,6 +21,7 @@ using (var channel = await connection.CreateChannelAsync())
         var body = ea.Body.ToArray();
         var message = Encoding.UTF8.GetString(body);
         Console.WriteLine($"Received trade: {message}");
+        return Task.CompletedTask;
     };
     await channel.BasicConsumeAsync(queue: "trades", autoAck: true, consumer: consumer);
 

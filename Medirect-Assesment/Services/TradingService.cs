@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TradingMicroservice.Models;
+using Medirect_Assesment.Models;
 
 namespace Medirect_Assesment.Services
 {

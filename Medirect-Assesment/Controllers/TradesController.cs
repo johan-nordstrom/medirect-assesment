@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Medirect_Assesment.Models;
 using Medirect_Assesment.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Medirect_Assesment.Controllers
 {
