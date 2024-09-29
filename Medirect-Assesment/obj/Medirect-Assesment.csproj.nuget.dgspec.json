@@ -57,7 +57,7 @@
             },
             "RabbitMQ.Client": {
               "target": "Package",
-              "version": "[7.0.0-rc.11, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

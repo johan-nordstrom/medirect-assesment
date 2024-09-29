@@ -9,7 +9,7 @@ namespace Medirect_Assesment.Services
     public class RabbitMQService : IMessageQueueService
     {
         private IConnection _connection;
-        private IChannel _channel;
+        private IModel _channel;
 
         public RabbitMQService()
         {
@@ -18,16 +18,15 @@ namespace Medirect_Assesment.Services
             //_channel = await _connection.CreateChannelAsync();
             //await _channel.QueueDeclareAsync(queue: "trades", durable: false, exclusive: false, autoDelete: false,
             //    arguments: null);
-            Startup();
+            var factory = new ConnectionFactory() { HostName = "localhost" };
+            _connection = factory.CreateConnection();
+            _channel = _connection.CreateModel();
+            _channel.QueueDeclare(queue: "trades", durable: false, exclusive: false, autoDelete: false,
+                arguments: null);
         }
 
         private async void Startup()
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
-            _connection = await factory.CreateConnectionAsync();
-            _channel = await _connection.CreateChannelAsync();
-            await _channel.QueueDeclareAsync(queue: "trades", durable: false, exclusive: false, autoDelete: false,
-                arguments: null);
         }
 
         public async Task PublishTradeMessageAsync(Trade trade)
@@ -35,7 +34,8 @@ namespace Medirect_Assesment.Services
             var message = JsonSerializer.Serialize(trade);
             var body = System.Text.Encoding.UTF8.GetBytes(message);
 
-            await _channel.BasicPublishAsync(
+            //await _channel.BasicPublishAsync(exchange: "", routingKey: "trades", body: body, basicProperties: null);
+            _channel.BasicPublish(
                 exchange: "",
                 routingKey: "trades",
                 mandatory: true,

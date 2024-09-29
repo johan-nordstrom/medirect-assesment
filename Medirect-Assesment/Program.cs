@@ -10,10 +10,10 @@ Console.WriteLine("Hello, World!");
 
 
 var factory = new ConnectionFactory() { HostName = "localhost" };
-using (var connection = await factory.CreateConnectionAsync())
-using (var channel = await connection.CreateChannelAsync())
+using (var connection = factory.CreateConnection())
+using (var channel = connection.CreateModel())
 {
-    await channel.QueueDeclareAsync(queue: "trades", durable: false, exclusive: false, autoDelete: false, arguments: null);
+    channel.QueueDeclare(queue: "trades", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
     var consumer = new AsyncEventingBasicConsumer(channel);
     consumer.Received += (model, ea) =>
@@ -23,7 +23,7 @@ using (var channel = await connection.CreateChannelAsync())
         Console.WriteLine($"Received trade: {message}");
         return Task.CompletedTask;
     };
-    await channel.BasicConsumeAsync(queue: "trades", autoAck: true, consumer: consumer);
+    channel.BasicConsume(queue: "trades", autoAck: true, consumer: consumer);
 
     Console.WriteLine("Press [enter] to exit.");
     Console.ReadLine();
