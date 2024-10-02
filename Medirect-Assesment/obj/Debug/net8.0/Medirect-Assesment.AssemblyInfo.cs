@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Medirect-Assesment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd1d123ca5d3ca9beec236586146c923e7b5ed11")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43422a05896d18751d8dcf4a513a43819ca03212")]
 [assembly: System.Reflection.AssemblyProductAttribute("Medirect-Assesment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Medirect-Assesment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
